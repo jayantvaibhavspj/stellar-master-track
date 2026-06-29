@@ -67,24 +67,28 @@ This repository is the home for your Level 7 submission proof, growth work, docu
 
 ## 📌 Submission Templates Added
 - `FINAL_SUBMISSION.md` — final Level 7 submission summary and evidence index
+- `FINAL_SUBMISSION.md` — final Level 7 submission summary and evidence index
 - `LEVEL7_SUBMISSION.md` — complete Level 7 submission guide and evidence tracker
+- `LEVEL7_PRODUCT_PLAN.md` — Level 7 product concept and mainnet startup plan
 - `SUBMISSION.md` — submission checklist and rapid evidence organizer
 - `growth_report.md` — monthly growth report template
 - `user_feedback_template.csv` — user feedback collection template
 - `user_feedback_responses.csv` — user feedback responses tracker
 - `product_updates.md` — product update post planning
 - `community_proof.md` — community participation proof template
+- `stellarflow-mainnet/` — starter React scaffold for the Level 7 product
 
 ## 📌 How to Use These Files
-1. Fill `LEVEL7_SUBMISSION.md` with exact project details and proof links.
-2. Use `growth_report.md` to record monthly metrics and learning.
-3. Capture user responses in `user_feedback_responses.csv`.
-4. Add community activity evidence in `community_proof.md`.
-5. Record update posts in `product_updates.md`.
-6. Use `FINAL_SUBMISSION.md` as your final review and submission summary.
-7. Keep `SUBMISSION.md` as a quick checklist for the final review.
+1. Read `LEVEL7_PRODUCT_PLAN.md` to understand the Level 7 product direction.
+2. Fill `LEVEL7_SUBMISSION.md` with exact project details and proof links.
+3. Use `growth_report.md` to record monthly metrics and learning.
+4. Capture user responses in `user_feedback_responses.csv`.
+5. Add community activity evidence in `community_proof.md`.
+6. Record update posts in `product_updates.md`.
+7. Use `FINAL_SUBMISSION.md` as your final review and submission summary.
+8. Keep `SUBMISSION.md` as a quick checklist for the final review.
 
-> Make sure no required proof item is missing. This repo now includes every core Level 7 evidence template so you can complete the submission accurately.
+> Make sure no required proof item is missing. This repo now includes every core Level 7 evidence template and a starter product scaffold so you can complete the submission accurately.
 
 ## 🚀 Starter Plan
 1. Choose product focus and target audience
