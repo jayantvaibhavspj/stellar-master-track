@@ -14,6 +14,10 @@ function App() {
   const [contractInfo, setContractInfo] = useState(null);
   const [txResult, setTxResult] = useState('');
   const [contractStatus, setContractStatus] = useState('Not checked');
+  const [destination, setDestination] = useState('');
+  const [amount, setAmount] = useState('1');
+  const [duration, setDuration] = useState('30');
+  const [frequency, setFrequency] = useState('daily');
 
   useEffect(() => {
     if (connected && publicKey) {
@@ -90,9 +94,14 @@ function App() {
       return;
     }
 
+    if (!destination) {
+      setStatus('Please enter a destination public key.');
+      return;
+    }
+
     setStatus('Preparing stream transaction...');
     try {
-      const tx = await buildStreamTransaction({ publicKey, network });
+      const tx = await buildStreamTransaction({ publicKey, network, destination, amount, duration, frequency });
       const txBase64 = tx.toEnvelope().toXDR('base64');
       const signed = await freighter.signTransaction(txBase64, {
         network: getNetworkPassphrase(network),
@@ -156,6 +165,49 @@ function App() {
             {connected && <li>Public Key: {publicKey}</li>}
             {connected && <li>Balance: {balance} XLM</li>}
           </ul>
+        </section>
+
+        <section className="stream-card">
+          <h2>Build a payment stream</h2>
+          <p>Create a placeholder stream transaction that can be signed and submitted to a future contract.</p>
+          <div className="stream-form">
+            <label>
+              Recipient public key
+              <input
+                type="text"
+                value={destination}
+                onChange={(event) => setDestination(event.target.value)}
+                placeholder="G..."
+              />
+            </label>
+            <label>
+              Amount (XLM)
+              <input
+                type="number"
+                min="0.00001"
+                step="0.00001"
+                value={amount}
+                onChange={(event) => setAmount(event.target.value)}
+              />
+            </label>
+            <label>
+              Duration (days)
+              <input
+                type="number"
+                min="1"
+                value={duration}
+                onChange={(event) => setDuration(event.target.value)}
+              />
+            </label>
+            <label>
+              Frequency
+              <select value={frequency} onChange={(event) => setFrequency(event.target.value)}>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </label>
+          </div>
         </section>
 
         <section className="contract-card">

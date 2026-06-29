@@ -13,20 +13,22 @@ export function getNetworkPassphrase(network) {
   return network === 'mainnet' ? Networks.PUBLIC : Networks.TESTNET;
 }
 
-export async function buildStreamTransaction({ publicKey, network }) {
+export async function buildStreamTransaction({ publicKey, network, destination, amount, duration, frequency }) {
   const server = getServer(network);
   const account = await server.loadAccount(publicKey);
+
+  const memoText = `Stream to ${destination} ${amount} XLM ${frequency} for ${duration}d`;
 
   const tx = new TransactionBuilder(account, {
     fee: '100',
     networkPassphrase: getNetworkPassphrase(network),
   })
     .addOperation(Operation.payment({
-      destination: publicKey,
+      destination: destination,
       asset: Asset.native(),
-      amount: '0.00001',
+      amount: amount || '0.0001',
     }))
-    .addMemo(Memo.text('StellarFlow stream placeholder'))
+    .addMemo(Memo.text(memoText.slice(0, 28)))
     .setTimeout(180)
     .build();
 

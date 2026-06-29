@@ -45,4 +45,5 @@ The starter UI includes:
 - Freighter wallet onboarding for testnet and mainnet
 - Public key display and balance loading
 - Contract status check for a placeholder contract account
+- Build a payment stream form with destination, amount, duration, and frequency
 - Prepare and sign a stream transaction skeleton ready for contract invocation

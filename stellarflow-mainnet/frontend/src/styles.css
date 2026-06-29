@@ -61,7 +61,7 @@ header {
   line-height: 1.8;
 }
 
-.status-card, .next-steps, .contract-card {
+.status-card, .next-steps, .contract-card, .stream-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
@@ -69,8 +69,34 @@ header {
   margin-bottom: 20px;
 }
 
-.status-card h2, .next-steps h2, .contract-card h2 {
+.status-card h2, .next-steps h2, .contract-card h2, .stream-card h2 {
   margin-top: 0;
+}
+
+.stream-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stream-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.stream-form input,
+.stream-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.stream-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .network-switch {
