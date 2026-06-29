@@ -35,7 +35,10 @@ This folder contains starter files for the next product in your Stellar journey:
 
 ## Next product work
 - Add Soroban mainnet contract integration
-- Configure wallet onboarding for Freighter / Lobstr / xBull
+- Expand wallet onboarding to support Lobstr and xBull
 - Add payment stream creation and history screens
 - Add analytics dashboard and feedback form
 - Deploy to Vercel and record mainnet proof
+
+## Wallet onboarding
+The starter UI already includes Freighter wallet onboarding for testnet and mainnet, public key display, and balance loading.
