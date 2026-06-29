@@ -1,15 +1,13 @@
-# Level 7 Founder Belt Submission Guide
+# Stellar Journey to Mastery — Level 7 Founder Belt Submission Guide
 
-This document collects every required proof item for a complete Stellar Master Track Level 7 submission.
+Welcome to Level 7 — the Founder Belt. This is the final stage of the Stellar Journey to Mastery monthly builder challenges.
 
-## 1. Submission Summary
-- Project name:
-- GitHub repo URL:
-- Live production URL:
-- Reporting period: June 2026 (active challenge)
-- Primary product value:
+At this stage, your product must demonstrate real startup growth: user feedback, acquisition, retention, community traction, and mainnet transaction activity.
 
-## 2. Required Proof Items
+## 🎯 What This Level Requires
+Complete evidence for the active challenge period (June 2026) or a catch-up period if needed.
+
+### Required Proof Items
 1. Public GitHub repository
 2. Minimum 30+ meaningful commits
 3. Live production application
@@ -22,6 +20,134 @@ This document collects every required proof item for a complete Stellar Master T
 10. Product update posts
 11. Community contribution proof
 12. Updated documentation
+
+## 1. Submission Summary
+- Project name:
+- GitHub repo URL:
+- Live production URL:
+- Reporting period: June 2026 (active challenge)
+- Primary product value:
+- Target audience:
+- Product-market fit focus:
+
+## 2. Project Overview
+- Product description:
+- Main features:
+- Real user problem solved:
+- Business model or growth model:
+
+## 3. Live Production Application
+- Live app URL:
+- Deployment platform (Vercel / Netlify / AWS / other):
+- Launch date:
+- How to demo the app:
+
+## 4. Mainnet Growth Proof
+- Total new mainnet users onboarded: 50+
+- New user acquisition sources:
+- Evidence links or screenshots:
+  - Screenshot 1:
+  - Screenshot 2:
+- Notes: Provide actual mainnet data from your production deployment.
+
+## 5. Mainnet Transaction Proof
+- Total mainnet transactions executed:
+- Transaction IDs / Explorer links:
+  1.
+  2.
+  3.
+- Notes: Use real Stellar mainnet transaction history, not testnet.
+
+## 6. User Feedback Sheet
+- Feedback collection method:
+  - Google Form / Typeform / spreadsheet
+- Feedback sheet link or file path:
+- Total responses collected:
+- Top feedback themes:
+  1.
+  2.
+  3.
+- Notes: Capture real user feedback and show how it guided product improvements.
+
+## 7. Product Improvement Commit Links
+- Improvement commit 1: URL + description
+- Improvement commit 2: URL + description
+- Improvement commit 3: URL + description
+- Additional improvement commits:
+- Notes: Connect each improvement to feedback or growth actions.
+
+## 8. Monthly Growth Report
+- Growth report file or link:
+- Key metrics:
+  - New mainnet users:
+  - Mainnet transactions:
+  - Active users / retention:
+  - Conversion / acquisition metrics:
+- What worked:
+- What did not work:
+- Next month plan:
+
+## 9. Social Media Growth Proof
+- Platform 1:
+  - Platform name:
+  - Profile URL:
+  - Followers count:
+  - Proof screenshot / link:
+- Platform 2 (optional):
+  - Platform name:
+  - Profile URL:
+  - Followers count:
+  - Proof screenshot / link:
+- Notes: 50+ followers across channels or on one strong channel.
+
+## 10. Product Update Posts
+- Post 1: Title / URL / date / summary
+- Post 2: Title / URL / date / summary
+- Post 3: Title / URL / date / summary
+- Notes: Share launch and improvement updates publicly.
+
+## 11. Community Contribution Proof
+- Community channel 1:
+  - Channel type: Discord / Telegram / Twitter Spaces / forum
+  - Link to discussion or event:
+  - Contribution summary:
+- Community channel 2:
+  - Channel type:
+  - Link:
+  - Contribution summary:
+- Notes: Show active Stellar ecosystem engagement.
+
+## 12. Documentation Updates
+- Updated docs files:
+  - `README.md`
+  - `LEVEL7_SUBMISSION.md`
+  - `growth_report.md`
+  - `user_feedback_template.csv`
+  - `user_feedback_responses.csv`
+  - `product_updates.md`
+  - `community_proof.md`
+- Documentation improvements:
+  1. Clear product overview and live links
+  2. Growth evidence organization
+  3. Submission instructions
+
+## 13. Submission Checklist
+- [ ] GitHub repo is public
+- [ ] 30+ meaningful commits exist
+- [ ] Live product is deployed and accessible
+- [ ] 50+ new mainnet users verified
+- [ ] Mainnet transactions are documented
+- [ ] Feedback sheet is completed
+- [ ] Improvement commits are linked
+- [ ] Growth report is complete
+- [ ] Social proof is documented
+- [ ] Product updates are recorded
+- [ ] Community proof is documented
+- [ ] Documentation is up to date
+
+---
+
+> This guide is built from the official Level 7 Founder Belt challenge details. Use it to collect and organize every required proof item for submission.
 
 ## 3. Public GitHub Repository
 - Repo name:
