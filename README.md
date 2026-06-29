@@ -102,7 +102,7 @@ This repository is the home for your Level 7 submission proof, growth work, docu
 ## 📌 Next Steps
 - Initialize Git in this folder
 - Add project architecture and deployment plan
-- Create `user_feedback_responses.xlsx`
+- Create `user_feedback_responses.csv`
 - Add growth report template
 - Start working on a live Stellar product
 
