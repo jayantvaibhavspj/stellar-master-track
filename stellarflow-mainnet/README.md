@@ -34,11 +34,15 @@ This folder contains starter files for the next product in your Stellar journey:
 - `frontend/src/styles.css` — basic styling
 
 ## Next product work
-- Add Soroban mainnet contract integration
+- Expand Soroban mainnet contract integration and deploy a live contract
 - Expand wallet onboarding to support Lobstr and xBull
 - Add payment stream creation and history screens
 - Add analytics dashboard and feedback form
 - Deploy to Vercel and record mainnet proof
 
-## Wallet onboarding
-The starter UI already includes Freighter wallet onboarding for testnet and mainnet, public key display, and balance loading.
+## Wallet onboarding and contract flow
+The starter UI includes:
+- Freighter wallet onboarding for testnet and mainnet
+- Public key display and balance loading
+- Contract status check for a placeholder contract account
+- Prepare and sign a stream transaction skeleton ready for contract invocation

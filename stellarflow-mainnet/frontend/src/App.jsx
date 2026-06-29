@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FreighterApi } from '@stellar/freighter-api';
-import { Server, Networks } from '@stellar/stellar-sdk';
+import { Server } from '@stellar/stellar-sdk';
+import { buildStreamTransaction, getContractStatus, getNetworkPassphrase } from './contractService';
 
 const freighter = new FreighterApi();
 
@@ -10,10 +11,14 @@ function App() {
   const [network, setNetwork] = useState('testnet');
   const [balance, setBalance] = useState('0');
   const [status, setStatus] = useState('Ready to connect');
+  const [contractInfo, setContractInfo] = useState(null);
+  const [txResult, setTxResult] = useState('');
+  const [contractStatus, setContractStatus] = useState('Not checked');
 
   useEffect(() => {
     if (connected && publicKey) {
       loadBalance();
+      checkContract();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [connected, publicKey, network]);
@@ -35,6 +40,13 @@ function App() {
       setStatus('Unable to load account balance. Make sure wallet is set to the selected network.');
       console.error(error);
     }
+  };
+
+  const checkContract = async () => {
+    setContractStatus('Checking contract status...');
+    const status = await getContractStatus(network);
+    setContractInfo(status);
+    setContractStatus(status.exists ? 'Contract exists on network' : `Contract not found: ${status.error}`);
   };
 
   const connectWallet = async () => {
@@ -67,6 +79,32 @@ function App() {
     setPublicKey('');
     setBalance('0');
     setStatus('Wallet disconnected');
+    setContractInfo(null);
+    setContractStatus('Not checked');
+    setTxResult('');
+  };
+
+  const signTransaction = async () => {
+    if (!connected) {
+      setStatus('Connect wallet first.');
+      return;
+    }
+
+    setStatus('Preparing stream transaction...');
+    try {
+      const tx = await buildStreamTransaction({ publicKey, network });
+      const txBase64 = tx.toEnvelope().toXDR('base64');
+      const signed = await freighter.signTransaction(txBase64, {
+        network: getNetworkPassphrase(network),
+      });
+
+      setTxResult(JSON.stringify(signed, null, 2));
+      setStatus('Transaction prepared and signed successfully');
+    } catch (error) {
+      console.error(error);
+      setTxResult('');
+      setStatus('Transaction signing failed.');
+    }
   };
 
   return (
@@ -118,6 +156,26 @@ function App() {
             {connected && <li>Public Key: {publicKey}</li>}
             {connected && <li>Balance: {balance} XLM</li>}
           </ul>
+        </section>
+
+        <section className="contract-card">
+          <h2>Contract integration</h2>
+          <p>Contract status: {contractStatus}</p>
+          {contractInfo && contractInfo.exists && (
+            <ul>
+              <li>Contract ID: {contractInfo.contractId}</li>
+              <li>Sequence: {contractInfo.sequence}</li>
+            </ul>
+          )}
+          <button className="btn" onClick={signTransaction} disabled={!connected}>
+            Prepare & Sign Stream Transaction
+          </button>
+          {txResult && (
+            <div className="tx-result">
+              <h3>Signed transaction data</h3>
+              <pre>{txResult}</pre>
+            </div>
+          )}
         </section>
 
         <section className="next-steps">
